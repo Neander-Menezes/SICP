@@ -1,0 +1,22 @@
+#lang sicp
+
+;(define (new-if predicate then-clause else-clause)
+;  (cond (predicate then-clause)
+;        (else else-clause)))
+
+
+;(define (sqrt-iter guess x)
+;  (new-if (good-enough? guess x)
+;          guess
+;          (sqrt-iter (improve guess x) x)))
+
+
+; Q: What happens when Alyssa attempts to use this to compute square roots? Explain.
+; .sqrt-iter is called with an initial guess
+; .new-if procedure is called with
+; predicate: (good-enough? guess x)
+; then-clause: guess
+; else-clause: (sqrt-iter (improve guess x) x))
+;
+; when the guess is good enough, it returns the guess itself
+; otherwise returns a recursive call to sqrt-iter with an improved guess

@@ -1,0 +1,29 @@
+(define (p) (p))
+
+(define (test x y) 
+  (if (= x 0) 
+      0 
+      y))
+
+(test 0 (p))
+
+
+
+applicative-order evaluation:
+- evaluates all expressions inner-out.
+
+Res: error, infinite p loop.
+
+
+normal-order evaluation:
+- doesn't evaluate operands until needed, expands operators.
+
+Res: 0, doesn't evaluate (p) at all
+
+
+// reasoning:
+(
+    (if (= 0 0) 0 y) 
+    0 
+    (p)
+    )
